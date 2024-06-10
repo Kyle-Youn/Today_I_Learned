@@ -84,5 +84,5 @@ def process_dates(filepath, year, month, days, holidays):
     messagebox.showinfo("완료", "수정이 완료되었습니다!")
 
 year, month, class_days, holidays = get_user_input()
-file_path = 'C:/Users/hjyou/Desktop/엑셀-파이썬 연동 플젝/메인 파일/24출석부.xlsx'  # 이 경로는 실행 파일이 있는 위치로 설정되었습니다.
+file_path = '24 출석부.xlsx'  # exe 실행 파일이 있는 위치. py파일에서는 경로 이슈로 오류 발생.
 process_dates(file_path, year, month, class_days, holidays)
