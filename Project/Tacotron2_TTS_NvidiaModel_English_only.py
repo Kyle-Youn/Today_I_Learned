@@ -1,4 +1,9 @@
 '''
+[Reperence]
+https://m.blog.naver.com/ditajrj147/222855952939
+'''
+
+'''
 [cmd]
 pip install tacotron2
 git clone https://github.com/NVIDIA/tacotron2.git
