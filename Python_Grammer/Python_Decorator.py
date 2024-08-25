@@ -1,13 +1,13 @@
-def log_decorator(func):
-    def wrapper(*args, **kwargs):
-        print(f"Calling {func.__name__}")
-        result = func(*args, **kwargs)
-        print(f"{func.__name__} finished")
-        return result
+def my_decorator(func):
+    def wrapper():
+        print("함수가 시작됩니다.")
+        func()
+        print("함수가 종료되었습니다.")
     return wrapper
 
-@log_decorator
-def display_info(name, age):
-    print(f"display_info ran with arguments ({name}, {age})")
+@my_decorator
+def say_hello():
+    print("안녕하세요!")
 
-display_info("John", 25)
+# 데코레이터가 적용된 함수 호출
+say_hello()
