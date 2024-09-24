@@ -17,3 +17,20 @@ async def main():
     await task2
 
 asyncio.run(main())
+
+
+
+import asyncio
+
+async def say_hello(name, delay):
+    await asyncio.sleep(delay)
+    print(f"{delay}초 후에 {name}님께 인사드립니다.")
+
+async def main():
+    await asyncio.gather(
+        say_hello("Alice", 1),
+        say_hello("Bob", 2),
+        say_hello("Charlie", 3),
+    )
+
+asyncio.run(main())
