@@ -11,3 +11,18 @@ def say_hello():
 
 # 데코레이터가 적용된 함수 호출
 say_hello()
+
+
+def decorator(func):
+    def new_func(*args, **kwargs):
+        print("새로운 함수 실행")
+        return func(*args, **kwargs)
+    return new_func()
+
+@decorator
+def original_function():
+    print("원래 함수 실행")
+    return "반환값"
+
+result = original_function
+print(result)
