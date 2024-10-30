@@ -14,3 +14,15 @@ else:
 finally:
     # 마지막에 항상 실행
     print("계산 시도가 완료되었습니다.")
+
+
+
+try:
+    userData = int(input())
+    result = int(10 / userData)
+except:
+    print('sorry~~')
+else:
+    print('예외발생 X')
+finally:
+    print('예외발생 여부와 상관없이 실행되는 코드입니다.')
