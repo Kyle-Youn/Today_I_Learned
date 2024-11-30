@@ -34,3 +34,25 @@ async def main():
     )
 
 asyncio.run(main())
+
+
+
+import asyncio
+
+async def task1():
+    print("Task 1 시작")
+    await asyncio.sleep(2)  # 2초간 대기
+    print("Task 1 완료")
+
+async def task2():
+    print("Task 2 시작")
+    await asyncio.sleep(1)  # 1초간 대기
+    print("Task 2 완료")
+
+async def main():
+    # 두 태스크를 동시에 실행
+    await asyncio.gather(task1(), task2())
+
+# 이벤트 루프 실행
+asyncio.run(main())
+
