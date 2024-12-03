@@ -16,3 +16,7 @@ compiled_model = rebel.compile_from_torch(
     # 호스트에 NPU가 설치되어 있는 경우, 아래의 `npu`인자는 명시하지 않아도 자동으로 감지됩니다. 
     npu="RBLN-CA12",
 )
+
+
+# 컴파일된 모델을 로컬저장소에 저장
+compiled_model.save("resnet50.rbln")
