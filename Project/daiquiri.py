@@ -12,3 +12,9 @@ logger = daiquiri.getLogger(__name__)
 logger.info("This is an info message")
 logger.waring("This is a warning message")
 logger.error("This is a error message")
+
+
+>>>>
+2024-01-01 12:00:00,000 INFO [module_name] This is an info message
+2024-01-01 12:00:00,001 WARNING [module_name] This is a warning message
+2024-01-01 12:00:00,002 ERROR [module_name] This is an error message
