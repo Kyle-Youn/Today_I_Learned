@@ -1,0 +1,1 @@
+hypercorn[h3]==0.17.1    # hypercorn HTTP3 has a bug
