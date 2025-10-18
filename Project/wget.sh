@@ -1,0 +1,3 @@
+#!/bin/bash
+
+wget https://cli-assets.heroku.com/heroku-linux-x64.tar.gz
