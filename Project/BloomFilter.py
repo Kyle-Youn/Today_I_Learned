@@ -21,3 +21,12 @@ class BloomFilter:
 
   def check(self, item):
     return all(self.bit_array[pos] == 1 for pos in self._hashes(item))
+
+
+# 사용 예시
+bf = BloomFilter(size=100, num_hashes=3)
+bf.add("apple")
+bf.add("banana")
+
+print(bf.check("apple"))    # True
+print(bf.check("orange:))    # False (또는 False Positive)
