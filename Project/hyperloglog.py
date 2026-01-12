@@ -11,3 +11,12 @@ class HyperLogLog:
         elif m >= 64: return 0.709
         elif m >= 32: return 0.697
         return 0.5
+
+    def add(self, item):
+        # Hash and split
+        h = mmh3.hash(str(item), signed=False)
+        idx = h & (self.m - 1)
+        w = h >> 24
+
+        # Count leading zeros + 1
+        self.buckets[idx] = max(self.buckets[idx], self._leading_zeros(w) + 1)
