@@ -20,3 +20,6 @@ class HyperLogLog:
 
         # Count leading zeros + 1
         self.buckets[idx] = max(self.buckets[idx], self._leading_zeros(w) + 1)
+
+    def _leading_zeros(self, w):
+        return (w | (1 << 50)).bit_length() - 51
