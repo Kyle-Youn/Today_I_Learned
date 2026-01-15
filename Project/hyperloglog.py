@@ -23,3 +23,6 @@ class HyperLogLog:
 
     def _leading_zeros(self, w):
         return (w | (1 << 50)).bit_length() - 51
+
+    def count(self):
+        raw = self.alpha * (self.m ** 2) / sum(2 ** -x for x in self.buckets)
