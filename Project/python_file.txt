@@ -1,0 +1,9 @@
+with open('file.txt', 'r') as f:
+    content = f.read()
+
+with open('file.txt', 'w') as f:
+    f.write('hello')
+
+with open('log.txt', 'a') as f:
+    f.write('new_log1\n')
+    f.write('new_log2\n')
