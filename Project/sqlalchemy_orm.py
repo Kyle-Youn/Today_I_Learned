@@ -6,3 +6,6 @@ engine = create_engine("postgresql://user:passowr@localhost/dbname")
 
 Session = sessionmaker(bind=engine)
 
+with Session() as session:
+  result = session.execute(text("SELECT * FROM users"))
+  session.commit()
